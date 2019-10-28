@@ -1,22 +1,100 @@
-.App {
+:root {
+  --primary-color: #f285ff;
+  --gray-color: #ccc;
+}
+
+
+body {
+  background-color: #212121;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+#content {
+  margin: 30px auto 60px;
+  width: 500px;
+}
+
+#add-form {
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 15px;
+  padding: 15px 15px 30px;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.tasks {
+
+}
+
+.tasks__no-data {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.task {
+  background-color: white;
+  padding: 15px 10px;
+}
+.task+.task {
+  border-top: 1px solid var(--gray-color)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task__head {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.task__check {
+  margin-right: 15px;
+}
+
+.error {
+  background-color: red;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.task__button {
+  padding: 8px 12px;
+  color: #000;
+  background-color: #f285ff;
+  border-width: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  outline-width: 0;
+  font-size: 16px;
+}
+
+.task__button:hover,
+.task__button:focus {
+  background-color: #ea3eff;
+}
+
+.task__button:active {
+  background-color: #ae5fb7;
+}
+
+.task__title {
+  flex: 1;
+  border-width: 0;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-right: 15px;
+  border: 2px solid transparent;
+  outline-width: 0;
+}
+
+.task__title:focus {
+  border-color: #ea3eff;
+}
+
+.task__title:hover {
+  background-color: #f3f3f3;
 }
